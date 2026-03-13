@@ -1,0 +1,178 @@
+Task 1B – Technical Design Plan
+
+1. Overview of the Technical Solution
+
+What to write about
+	•	Briefly explain what your final product will be (website, app, system etc.)
+	•	Describe how users will interact with it
+	•	Mention the main features your solution will include
+	•	Explain how it solves the problem from Task 1A
+
+Example points
+	•	The system will be a responsive website
+	•	Users can navigate using a menu
+	•	It will allow users to perform specific tasks (login, search, view content etc.)
+
+Tip 💡
+Keep it simple. Think of this section like “what the system will do overall.”
+
+⸻
+
+2. User Interface Design
+
+What to write about
+	•	Explain your wireframes
+	•	Describe the layout of each main page
+	•	Explain why you placed elements where you did
+	•	Mention usability and accessibility considerations
+
+Things to mention
+	•	Navigation bar
+	•	Buttons and menus
+	•	Page layout
+	•	Mobile responsiveness
+	•	Accessibility (clear fonts, colours, readable layout)
+
+Tip 💡
+When talking about a wireframe, use phrases like:
+“This layout was chosen to make navigation simple for the user.”
+
+⸻
+
+3. User Journey / Workflows
+
+What to write about
+	•	Explain the workflows you created
+	•	Describe the steps the user takes to complete tasks
+	•	Explain how the system responds to user actions
+
+Example structure
+	•	User opens homepage
+	•	User selects an option
+	•	System processes request
+	•	User receives output
+
+Tip 💡
+Always explain why the workflow is efficient or easy for users.
+
+⸻
+
+4. System Architecture / How the System Works
+
+What to write about
+	•	Describe the technical structure
+	•	Frontend vs backend (if relevant)
+	•	How information flows through the system
+
+Possible things to mention
+	•	Web server
+	•	Browser
+	•	Database
+	•	APIs (if used)
+
+Tip 💡
+Even a simple explanation works:
+“The frontend will display the interface while the backend processes user requests.”
+
+⸻
+
+5. Data Handling and Storage
+
+What to write about
+	•	What data the system collects
+	•	Where it is stored
+	•	How it is processed
+
+Examples
+	•	User information
+	•	Form submissions
+	•	Stored content
+
+You can also mention:
+	•	Databases
+	•	Tables
+	•	Data validation
+
+Tip 💡
+Always mention security of user data if relevant.
+
+⸻
+
+6. Security Considerations
+
+What to write about
+	•	How the system protects users and data
+	•	Measures to prevent misuse
+
+Examples
+	•	Secure login systems
+	•	Input validation
+	•	HTTPS
+	•	Password protection
+	•	Limiting access to data
+
+Tip 💡
+Examiners love seeing awareness of security risks.
+
+⸻
+
+7. Accessibility Considerations
+
+What to write about
+Explain how the design works for all users, including people with disabilities.
+
+Examples:
+	•	Clear fonts
+	•	Good colour contrast
+	•	Keyboard navigation
+	•	Screen reader compatibility
+	•	Simple navigation
+
+Tip 💡
+Mention WCAG accessibility principles if you want extra marks.
+
+⸻
+
+8. Testing Plan
+
+What to write about
+Explain how the system will be tested to make sure it works.
+
+Examples:
+	•	Functional testing
+	•	User testing
+	•	Checking links and navigation
+	•	Testing on different devices
+
+Tip 💡
+Mention testing before release and fixing bugs.
+
+⸻
+
+9. Tools and Technologies
+
+What to write about
+List and explain the technologies used.
+
+Examples:
+	•	HTML
+	•	CSS
+	•	JavaScript
+	•	Frameworks
+	•	Design tools (Figma, Adobe XD etc.)
+
+Explain why you chose them.
+
+Tip 💡
+Link tools to benefits like performance, flexibility, or ease of development.
+
+⸻
+
+Final Tip for Task 1B
+
+The examiners mainly want to see that you can justify design decisions.
+
+Try to use sentences like:
+	•	“This was chosen because…”
+	•	“This improves usability by…”
+	•	“This ensures security because…”
