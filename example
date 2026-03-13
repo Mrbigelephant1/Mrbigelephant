@@ -1,0 +1,883 @@
+The Mat Works
+ 
+T Level Digital Production, Design and Development Occupational Specialism Project – Task 1
+ 
+Introduction
+ 
+The goal of this project is to create a working solution that can be implemented by The Mat Works. We can achieve this goal by first researching the required knowledge we need to be able to understand all aspects of the project, such as business contexts and design attributes. The next step would be to spend some time producing the previously thought out and designed solution using our judgment to organise the project and spend time where we see the most use. Afterwards we would set up multiple variations of receiving feedback for our solution with ways such as using a form to gather extensive critiques of our product. Finally, using the in depth feedback gathered, we would reflect on our management of the project and compare our produced product to what the desired outcome would have been admitting mistakes and acknowledging what would need to be improved on for next time.
+This documents will contain the proposal, such as what the issue is and why we need a solution, the system design, which would determine what our design process will be like colour scheme or layout of the web pages. I will also consider accessibility and how inclusive the solution will be to others. By the end of the document I will go in depth about different references I used such as websites I took inspiration from.
+The purpose of Task 1 is to create a reliable structure to follow throughout the project, guiding me on how to layout specific things and to help understand the purpose of different aspects of the solution. It allows me to work more efficiently when having a solid structure to follow.
+ 
+ 
+ 
+The proposal
+ 
+ 
+ 
+Business Context
+ 
+The Mat works operates in a council-owned repurposed historical prison site, mainly focusing on arts and music hosting concerts and events, whilst having other multi-purpose facilities such as rehearsal rooms, a café/bar, and a main auditorium. Everyone is able to use these facilities as The Mat Works serves both public visitors and professional musicians.
+ 
+Service
+Description
+
+Live performances
+
+Ticketed events located in the main auditorium.
+
+Rehearsal Space
+
+Rooms rented by musicians/Visitors.
+
+Equipment Hire
+
+Sound and lighting equipment available.
+
+Café/Bar
+
+Public social space
+
+ 
+ 
+ 
+User groups
+
+This system will be used by several different groups, all interacting with The Mat Works in different ways. Understanding who these users are helps shape the features the system needs to include.
+Public Customers
+These are people visiting the venue for events, gigs, exhibitions, or to use the café/bar. Their main interaction with the system is browsing events, buying tickets, and accessing basic information about the venue.
+Musicians and Bands
+These users rely on the venue for rehearsal spaces and equipment. They need a simple way to check availability, make bookings, and manage their hire sessions without needing to contact staff directly.
+Operational Staff
+This includes frontofhouse staff, technicians, booking coordinators, and café/bar employees. They need access to scheduling, bookings, and daytoday operational details to keep things running smoothly.
+Management
+Managers require higherlevel access, such as reports on bookings, revenue, equipment usage, staffing levels, and overall performance. Their priority is understanding the business data behind the venue.
+ 
+ 
+ 
+Current Situation / Operational Challenges
+
+Although The Mat Works provides a wide range of services, much of their current booking and management process is handled manually. This leads to several challenges that affect both customers and staff:
+Booking Confusion
+Using paper forms, phone calls, or separate spreadsheets increases the risk of mistakes. Doublebooking rooms or equipment is a real possibility.
+High Staff Workload
+Staff spend time handling enquiries, chasing information, and updating records. This reduces time they could spend on supporting customers or improving the venue experience.
+Limited Tracking and Reporting
+Because the data isn't centralised, it’s difficult for management to get accurate insight into revenue, usage levels, or which services are performing well.
+Customer Experience Issues
+Public users and musicians don’t have a clear online system for booking or checking availability. This makes the process slower and less convenient.
+Overall Inefficiency
+The current system doesn’t scale well as demand increases, meaning the venue risks losing bookings or missing opportunities to improve operations.
+ 
+ 
+ 
+Business Goals
+
+The aim of the new system is to support the venue’s growth, improve the customer experience, and make internal processes much more efficient. The key goals include:
+Efficient Booking Management
+A centralised system that lets staff and customers manage bookings easily and reduces the risk of errors.
+Improved Customer Experience
+Clear navigation, easy ticket purchasing, and quick access to information about facilities and availability.
+Better Inventory and Resource Tracking
+Ensuring equipment, rooms, and staff schedules are accurately managed and always up to date.
+Secure User Accounts
+Allowing customers, musicians, and staff to safely access the services they need with proper authentication.
+Data Reporting and Insights
+Giving the management team accurate data on revenue, usage statistics, and performance trends to support decisionmaking.
+ 
+ 
+ 
+Problem Breakdown
+
+The Mat Works operates several services at the same time, which creates a number of operational challenges that a digital management system needs to solve. These challenges can be broken down into the following key problem areas.
+Problem Area | Description of Issue | Impact on the Business
+Ticket Sales Management | Ticket sales, seat allocation and event information are currently handled manually or across different tools, which can lead to errors or outdated information. | Risk of double bookings, frustrated customers, and potential loss of revenue during busy events.
+Rehearsal Room Scheduling | Musicians often book rehearsal rooms at overlapping times, and staff currently track this manually. | Time clashes, unhappy customers, and confusion for staff organising room availability.
+Equipment Inventory Control | Equipment such as microphones, amps and lighting is used by multiple bands. Without a realtime system, availability isn’t always accurate. | Overbooking equipment, lastminute cancellations, and damage to the venue’s reputation.
+User Account Handling | Different users (public, musicians, staff, management) all need different permissions. Without proper access levels, information can be exposed or misused. | Security risks, GDPR concerns, and loss of trust from users.
+Operational Admin Workload | Staff spend a lot of time manually updating records, confirming bookings, and handling enquiries. | Staff burnout, time wasted, and slower service for customers.
+Lack of Business Reporting | The venue currently has limited ways to analyse booking data or track revenue trends across services. | Management have weaker decisionmaking power and may miss opportunities to increase efficiency or income.
+ 
+ 
+ 
+System Component Breakdown
+
+Due to the scale and multifunctional nature of The Mat Works venue, the proposed solution can be divided into several interconnected system components. Each component focuses on a specific operational area while still contributing to one overall fullstack system. This makes the solution easier to manage, develop, and maintain.
+System Component | Purpose of the Component | Main Users | Related Problem Area
+Public Ticketing & Event System | Allows customers to browse upcoming events, view details, choose seats, and purchase tickets online. | General public | Ticket Sales Management
+Rehearsal Room Booking System | Lets musicians check room availability and book rehearsal spaces in specific time slots. | Musicians and bands | Rehearsal Room Scheduling
+Equipment Inventory & Hire System | Tracks equipment availability and prevents items being doublebooked during sessions or events. | Musicians (request), Management (maintain) | Equipment Inventory Control
+User Account & Authentication System | Handles registration, secure login, and rolebased access so different users see different parts of the system. | All users | User Account Handling
+Operational Admin System | Gives staff the tools to manage bookings, customer information, equipment, and event updates. | Staff | Operational Admin Workload
+Management & Reporting Dashboard | Shows management key data such as revenue, room usage, equipment demand, and booking trends. | Management | Lack of Business Reporting
+Breaking the system into components ensures each part can be designed, built, and tested separately. This reflects real-world modular system architecture, makes the application easier to scale in the future, and ensures each problem area is addressed with a focused solution.
+ 
+ 
+ 
+ 
+Client Requirements
+
+The client has outlined a number of functional and operational requirements that the system must fulfil. These requirements have been extracted from the brief and structured clearly below.
+Requirement ID | Requirement Description | User Group
+R1 | The system must display public venue information such as opening hours and facilities. | Public
+R2 | Users must be able to browse upcoming events at the venue. | Public
+R3 | Users must be able to select seats and purchase tickets online. | Public
+R4 | Users must be able to register an account and log in securely. | Public
+R5 | Users must be able to view their past ticket purchases. | Public
+R6 | Musicians must be able to view rehearsal room availability. | Musician
+R7 | Musicians must be able to book rehearsal rooms in specific time slots. | Musician
+R8 | Musicians must be able to hire equipment when making a booking. | Musician
+R9 | The system must check and validate realtime equipment availability. | Musician
+R10 | Musicians must be able to view their past bookings. | Musician
+R11 | Staff must be able to securely log in with stafflevel access. | Staff
+R12 | Staff must be able to create, edit, update, and delete event details (CRUD). | Staff
+R13 | Staff must be able to view and manage rehearsal room bookings. | Staff
+R14 | Staff must be able to manage ticket sales and customer booking records. | Staff
+R15 | Staff must be able to manage customer accounts. | Staff
+R16 | Management must be able to log in with a higher access level. | Management
+R17 | Management must be able to book and manage the main auditorium. | Management
+R18 | Management must be able to manage equipment inventory, including adding and removing items. | Management
+R19 | Management must be able to manage staff accounts and permissions. | Management
+R20 | Management must be able to view usage statistics, financial reports, and booking analytics. | Management
+These requirements form the foundation for the system’s design. They ensure all user groups are supported and that the final system directly solves the operational challenges identified earlier.
+ 
+ 
+ 
+Business Goals
+ 
+The Mat Works aims to modernise its operations by introducing a digital system that supports both daytoday efficiency and longterm growth. As a multiservice venue with diverse users, the organisation needs a solution that reduces administrative pressure, improves customer experience, and provides clearer oversight of its facilities. The new system should help the venue operate more smoothly, make better use of its resources, and strengthen its reputation as a professional, wellmanaged arts space. To achieve this, the business is focused on the following goals:
+• Streamline Booking Management Reduce manual processes and eliminate double bookings for rooms, equipment, and events.
+• Improve Customer Experience Provide a clear, userfriendly way for the public and musicians to browse availability, make bookings, and manage their accounts.
+• Enhance Inventory and Resource Tracking Ensure equipment availability is accurate and up to date, preventing conflicts and loss of assets.
+• Support Staff Efficiency Reduce administrative workload by automating repetitive tasks and centralising information.
+• Strengthen Financial and Operational Reporting Give management access to reliable data on bookings, revenue, and utilisation to support better decisionmaking.
+• Increase Overall Professionalism Present a modern, organised system that reflects the venue’s status as a key cultural space within the community.
+ 
+ 
+ 
+Development Workflow 
+ 
+The development workflow outlines the structured process that will be followed to design and build The Mat Works Venue Management and Booking System. Establishing a clear workflow ensures that the project is organised, efficient, and aligned with the client’s requirements at every stage. It also helps maintain consistency across the system’s components, from early planning through to final evaluation.
+[Insert Workflow Diagram Here] Figure 1: Development Workflow
+The workflow for this project follows a logical, industrystandard sequence:
+1. Requirement Analysis
+Reviewing the client brief, identifying user needs, and confirming all functional and nonfunctional requirements. This ensures the system is built on a solid understanding of the venue’s operational challenges.
+2. System Design
+Creating wireframes, blocked designs, database structures, algorithms, and user journeys. This stage defines how the system will look, behave, and store data before any coding begins.
+3. Development
+Building the frontend and backend components of the system. This includes implementing user interfaces, authentication, booking logic, inventory validation, and administrative dashboards.
+4. Testing
+Carrying out functional testing, validation testing, security checks, and user acceptance testing. This ensures the system works correctly, is secure, and meets the expectations of staff, musicians, and public users.
+5. Deployment
+Preparing the system for realworld use, including hosting, configuration, and ensuring all components work together seamlessly.
+6. Evaluation
+Reviewing the final system against the original requirements, gathering feedback, and identifying areas for improvement in future iterations.
+ 
+ 
+ 
+Wireframes
+ 
+https://wireframe.cc/Cu65Ib Home page
+
+ 
+ 
+ 
+https://wireframe.cc/b8uUtS Current events
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+https://wireframe.cc/qImf9W Private Hire
+
+ 
+ 
+ 
+ 
+https://wireframe.cc/8yGbpX Info
+
+ 
+ 
+ 
+Colour Palette
+ 
+The colour palette defines the visual identity of the system and ensures a consistent, professional appearance across all pages. The chosen colours reflect the atmosphere of The Mat Works: modern, creative, and rooted in its industrialheritage setting. The palette also supports accessibility by providing strong contrast levels and clear visual hierarchy.
+ 
+Crimson Violet
+
+#481130
+
+Navigation bar, headers, footer background
+
+Plum
+
+#FDAEF4
+
+Buttons, alerts, key interactive elements
+
+Black
+
+#000000
+
+Section backgrounds, card backgrounds
+
+Blue green
+
+#2698B4
+
+Main content areas, text backgrounds
+
+Strong Cyan
+
+#1BDBE5
+
+Notifications, important highlights
+
+ 
+These colours work together to create a clean, modern interface while maintaining readability and accessibility for all users.
+
+ 
+ 
+ 
+Typography plays an important role in ensuring the system is readable, professional, and accessible across all devices. The chosen fonts support a modern, clean aesthetic that aligns with The Mat Works’ identity as a contemporary arts and music venue. The combination of a bold heading font and a highly readable body font ensures clarity for all user groups, including public visitors, musicians, staff, and management.
+Text Style
+
+Font
+
+Usage
+
+Heading Font
+
+Montserrat
+
+Used for page titles, section headers, and dashboard headings to create strong visual hierarchy.
+
+Body Font
+
+Open Sans
+
+Used for paragraphs, tables, and general content to ensure readability on both desktop and mobile.
+
+UI Font
+
+Roboto
+
+Used for buttons, labels, navigation menus, and form inputs for a clean, modern interface.
+
+This typography combination ensures consistency across the system and supports accessibility by maintaining clear contrast and legibility at various sizes.
+ 
+ 
+ 
+Algorithms
+ 
+Algorithms define the logical processes that power key system features. They ensure that bookings, authentication, and inventory checks operate reliably and consistently. Each algorithm below is presented using clear pseudocode, followed by an explanation of how it supports the system’s functionality and prevents common operational issues identified in the proposal.
+ 
+Seat Allocation Algorithm
+
+ 
+Code
+START
+User selects event
+Load seat map for selected event
+User clicks on a seat
+IF seat.status == "available" THEN
+   Temporarily reserve seat
+   Add seat to user's basket
+ELSE
+   Display "Seat Unavailable"
+END IF
+ 
+Explanation: This algorithm prevents doublebooking by checking the realtime status of each seat before allowing a user to reserve it. Once selected, the seat is temporarily locked until the user completes or cancels the purchase, ensuring accuracy during busy event periods.
+ 
+Equipment Availability Algorithm
+
+ 
+Code
+START
+User selects rehearsal room and time slot
+User selects equipment items
+FOR each item in selected equipment
+   CHECK availability for the chosen time slot
+   IF item.quantity_available < 1 THEN
+       Display "Equipment Unavailable"
+       STOP booking process
+   END IF
+END FOR
+Proceed to confirm booking
+ 
+Explanation: This algorithm ensures that equipment cannot be overbooked. It checks availability for the exact time slot selected by the musician. If any item is unavailable, the system stops the booking and alerts the user, preventing scheduling conflicts and inventory errors.
+ 
+User Login Authentication Algorithm
+
+ 
+Code
+START
+User enters email and password
+Hash the entered password
+Retrieve stored user record by email
+IF no record found THEN
+   Display "Invalid Credentials"
+ELSE IF hashed_password == stored_password_hash THEN
+   Grant access based on user.role
+ELSE
+   Display "Invalid Credentials"
+END IF
+ 
+Explanation: This algorithm ensures secure login for all user groups. Passwords are compared using hashing rather than plain text, protecting user data. Rolebased access ensures that public users, musicians, staff, and management only access the features intended for them.
+ 
+Rehearsal Room Conflict Check Algorithm
+
+ 
+Code
+START
+User selects room, date, and time slot
+Retrieve all existing bookings for that room
+FOR each booking in room_bookings
+   IF selected_time overlaps with booking.time THEN
+       Display "Time Slot Unavailable"
+       STOP booking process
+   END IF
+END FOR
+Allow user to continue booking
+ 
+Explanation: This algorithm prevents doublebooking of rehearsal rooms by checking for overlapping time slots. It ensures that musicians cannot accidentally book a room already reserved by someone else.
+ 
+Ticket Purchase Confirmation Algorithm
+
+ 
+Code
+START
+User proceeds to checkout
+Verify all selected seats are still reserved
+IF any seat.status != "reserved" THEN
+   Display "Seat No Longer Available"
+   Return user to seat selection
+ELSE
+   Mark seats as "sold"
+   Generate booking record
+   Display confirmation
+END IF
+ 
+Explanation: This final verification step ensures that no two users can purchase the same seat during hightraffic periods. It confirms seat availability before completing the transaction and generating the ticket record.
+ 
+ 
+ 
+User Journeys
+ 
+User journeys illustrate how each user group interacts with the system from start to finish. They help ensure that every process is logical, efficient, and aligned with the requirements identified earlier. By mapping out these journeys, we can confirm that the system supports realworld behaviour and provides a smooth experience for public users, musicians, staff, and management.
+Each journey includes a flow diagram placeholder followed by a clear explanation of the steps involved.
+ 
+Public Ticket Purchase Journey
+
+Musician Rehearsal Booking Journey
+
+Staff Event Management Journey
+
+Management Reporting & Auditorium Booking Journey
+
+ 
+ 
+ 
+Database Design
+ 
+The database design defines how data will be stored, structured, and linked across the system. A clear and wellorganised database is essential for supporting bookings, ticket sales, equipment management, user accounts, and reporting. The tables below outline the core entities required for The Mat Works system, including their key fields and purposes. This structure ensures the system is scalable, secure, and capable of handling the venue’s multifunctional operations.
+ 
+Users Table
+
+Stores all user accounts, including public customers, musicians, staff, and management. Rolebased access is controlled through the role field.
+Field Name
+
+Data Type
+
+Description
+
+user_id
+
+INT (PK)
+
+Unique identifier for each user
+
+name
+
+VARCHAR
+
+Full name of the user
+
+email
+
+VARCHAR
+
+Used for login and communication
+
+password_hash
+
+VARCHAR
+
+Securely stored hashed password
+
+role
+
+VARCHAR
+
+public / musician / staff / management
+
+date_created
+
+DATETIME
+
+When the account was created
+
+ 
+Events Table
+
+Stores all public events that take place in the main auditorium.
+Field Name
+
+Data Type
+
+Description
+
+event_id
+
+INT (PK)
+
+Unique identifier for each event
+
+title
+
+VARCHAR
+
+Name of the event or performance
+
+description
+
+TEXT
+
+Event details
+
+date
+
+DATE
+
+Event date
+
+time
+
+TIME
+
+Event start time
+
+price
+
+DECIMAL
+
+Ticket price
+
+auditorium_booking_id
+
+INT (FK)
+
+Links to auditorium reservation
+
+ 
+Auditorium Bookings Table
+
+Used by management to reserve the auditorium before events can be created.
+Field Name
+
+Data Type
+
+Description
+
+auditorium_booking_id
+
+INT (PK)
+
+Unique identifier
+
+date
+
+DATE
+
+Reserved date
+
+start_time
+
+TIME
+
+Start time
+
+end_time
+
+TIME
+
+End time
+
+booked_by
+
+INT (FK)
+
+Manager who made the booking
+
+ 
+Rehearsal Rooms Table
+
+Stores information about each rehearsal room available for musicians.
+Field Name
+
+Data Type
+
+Description
+
+room_id
+
+INT (PK)
+
+Unique identifier
+
+room_name
+
+VARCHAR
+
+Room label (e.g., “Studio 1”)
+
+capacity
+
+INT
+
+Maximum occupancy
+
+hourly_rate
+
+DECIMAL
+
+Cost per hour
+
+ 
+Rehearsal Bookings Table
+
+Stores all musician bookings for rehearsal rooms.
+Field Name
+
+Data Type
+
+Description
+
+booking_id
+
+INT (PK)
+
+Unique identifier
+
+user_id
+
+INT (FK)
+
+Musician who made the booking
+
+room_id
+
+INT (FK)
+
+Room being booked
+
+start_time
+
+DATETIME
+
+Booking start
+
+end_time
+
+DATETIME
+
+Booking end
+
+total_cost
+
+DECIMAL
+
+Cost including equipment addons
+
+ 
+Equipment Table
+
+Stores all equipment available for hire.
+Field Name
+
+Data Type
+
+Description
+
+equipment_id
+
+INT (PK)
+
+Unique identifier
+
+name
+
+VARCHAR
+
+Equipment name
+
+quantity
+
+INT
+
+Total number available
+
+hire_price
+
+DECIMAL
+
+Cost to hire per session
+
+status
+
+VARCHAR
+
+Available / Out of Service
+
+ 
+Equipment Hire Table
+
+Links equipment items to rehearsal bookings.
+Field Name
+
+Data Type
+
+Description
+
+hire_id
+
+INT (PK)
+
+Unique identifier
+
+booking_id
+
+INT (FK)
+
+Rehearsal booking
+
+equipment_id
+
+INT (FK)
+
+Equipment item
+
+quantity
+
+INT
+
+Number of units hired
+
+ 
+Tickets Table
+
+Stores ticket purchases for events.
+Field Name
+
+Data Type
+
+Description
+
+ticket_id
+
+INT (PK)
+
+Unique identifier
+
+user_id
+
+INT (FK)
+
+Customer who purchased
+
+event_id
+
+INT (FK)
+
+Event being attended
+
+seat_number
+
+VARCHAR
+
+Allocated seat
+
+purchase_date
+
+DATETIME
+
+When the ticket was bought
+
+ 
+Staff Accounts Table
+
+Used for staff and management account control.
+Field Name
+
+Data Type
+
+Description
+
+staff_id
+
+INT (PK)
+
+Unique identifier
+
+user_id
+
+INT (FK)
+
+Links to Users table
+
+role_level
+
+VARCHAR
+
+staff / management
+
+permissions
+
+TEXT
+
+Defines access rights
+
+ 
+System Logs Table
+
+Tracks important system actions for security and auditing.
+Field Name
+
+Data Type
+
+Description
+
+log_id
+
+INT (PK)
+
+Unique identifier
+
+user_id
+
+INT (FK)
+
+Who performed the action
+
+action
+
+VARCHAR
+
+Description of the action
+
+timestamp
+
+DATETIME
+
+When it occurred
+
+This database structure supports all core system features, including ticket sales, rehearsal bookings, equipment management, user authentication, and reporting. It also ensures data integrity through the use of primary and foreign keys, enabling reliable relationships between tables.
+ 
+ 
+ 
+ERD Diagram
+ 
+The Entity Relationship Diagram (ERD) provides a visual representation of how the system’s database tables connect to one another. It shows the relationships between users, bookings, events, equipment, and administrative data. This diagram is essential for ensuring the database is structured logically and supports all required system functionality, including ticket sales, rehearsal bookings, equipment management, and reporting.
+ 
+ 
+ 
+Test Strategy
+ 
+A structured test strategy ensures that every part of the system functions correctly, meets the client requirements, and provides a reliable experience for all user groups. Testing will be carried out throughout development to identify issues early, maintain quality, and confirm that the final system is stable, secure, and userfriendly. The table below outlines the key testing types that will be used for The Mat Works system.
+ 
+Test Type
+
+Purpose
+
+Example Test
+
+Functional Testing
+
+Ensures each feature works as intended and meets the requirements.
+
+Confirm that musicians can successfully book a rehearsal room (R7).
+
+Validation Testing
+
+Checks that user inputs are correct, safe, and handled properly.
+
+Ensure email fields reject invalid formats during registration (R4).
+
+Security Testing
+
+Confirms that authentication, permissions, and data protection are secure.
+
+Verify that staff cannot access managementonly features (R16–R19).
+
+Usability Testing
+
+Ensures the interface is easy to navigate and understand.
+
+Test that public users can find and purchase tickets without confusion (R2–R3).
+
+Performance Testing
+
+Checks system behaviour under load or high activity.
+
+Simulate multiple users booking rooms at the same time.
+
+Compatibility Testing
+
+Ensures the system works across different devices and browsers.
+
+Test the site on mobile, tablet, and desktop.
+
+Integration Testing
+
+Confirms that different components work together correctly.
+
+Ensure that booking a rehearsal room also updates equipment availability.
+
+User Acceptance Testing (UAT)
+
+Final approval from real users to confirm the system meets expectations.
+
+Staff test the admin dashboard to confirm it supports daily operations.
+
+This testing strategy ensures that the final system is robust, secure, and fully aligned with the needs of The Mat Works and its users.
+ 
+ 
+ 
+References
+ 
+This section lists all sources, tools, and materials used during the research and design stages of the project. Including references demonstrates professionalism, transparency, and academic integrity. It also shows that design decisions were informed by real examples, industry standards, and reliable information.
+The references below cover inspiration for layout, colour palettes, wireframes, system design principles, and general research into venue management systems.
+Websites & Online Resources
+• W3Schools — General HTML, CSS, and JavaScript reference
+• Bootstrap Documentation — Layout and UI component inspiration
+• Google Fonts — Typography selection (Montserrat, Open Sans, Roboto)
+Tools Used
+• Draw.io — Flow diagrams, user journeys, and ERD creation
+• Visual Studio Code — Development environment
+• GitHub — Version control and project organisation
+Websites Used
+TAM - Temple of Art and Music
+• Blue, Black, and White colour scheme for this website however it is heavily reliant on the pictures for the home page but on others it appears to have a blue banner at top with tickets being advertised on and the main body of the page has white background colour with black text. Layout is slightly poor
+ 
+Welcome to the Southbank Centre – an engine of creativity
+• Yellow, Black, and White colour scheme for this website with an image as the main hero on the home page and yellow borders on the sides surrounding the page, the main body us white with black writing the font of the website is very aesthetically pleasing, Layout is good and website feels professional.
+ 
+Albert Hall Manchester
+• Black, Yellow (sand), and red colour scheme for this website with a 3-image carousal at the beginning nice bold font with a dark black background colour for the body and the sand colour for the text, don’t like the dropdown for the navbar but other than that really good website with an amazing layout.
+ 
+The Old Fire Station
+• Red, Black, and White colour scheme for this website with a large image for the hero with a CTA in the middle, as it moves down it uses black as the main background colour with white for the text only hint of red is with the image and the CTA at the top, really good layout.
+ 
