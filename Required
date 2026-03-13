@@ -1,0 +1,16 @@
+
+Requirements of the brief for task 1B:
+Produce a set of design documents for the digital solution you are proposing. The design documentation must include:
+•	Visual/interface designs 
+•	Data requirements
+•	A selection of algorithm designs
+•	A test strategy.
+Your proposed solution must be of sufficient scope and complexity to demonstrate your ability to implement code in at least two appropriate languages to implement front-end and back-end process.
+Your design documents should provide sufficient detail to:
+•	Effectively communicate the intended solution to both technical and non-technical stakeholders
+•	Allow the client to make informed decisions
+•	Allow a third-party developer to use the design documents to create the proposed solution.
+Your test strategy does not need to detail specific tests for every part of the solution. However, it should provide a selection of tests, relevant to your proposed solution, that show:
+•	The order in which you intend to test all components of the solution
+•	The types of tests to be carried out for each component.
+Your algorithm designs do not need to show the whole solution but should show how you would solve several different key problems. You should limit your algorithm designs to a maximum of five complex problems
