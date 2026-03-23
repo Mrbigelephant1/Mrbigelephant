@@ -1,0 +1,91 @@
+/* This is for the body of the page */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+
+/* The text */
+
+body {
+  line-height: 1.6;
+  color: #000000; /* The text */
+  background-color: #ffffff;
+}
+
+/* outer layer of the buttons */
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #ffffff;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Inner layer of the buttons */
+
+button a {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #333;
+  color:  #ffffff; /* Text of the button */
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* The header of the page */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #000000;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.logo {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Inner colours */
+
+nav{
+  background-color: #000000;
+  box-shadow: white;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+/* Text colour of the buttons */
+
+.menu a{
+  color: #ffffff;
+  padding: 10px 15px;
+  display: flex;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  text-decoration: none;
+
+}
+
+.menu a:hover,
+.menu a:active{
+  background-color: #9e1a1a;
+  color: #ffffff;
+}
+
